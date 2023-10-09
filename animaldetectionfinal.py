@@ -9,15 +9,15 @@ def say():
 def makecall(animal):
     # Find your Account SID and Auth Token at twilio.com/console
     # and set the environment variables. See http://twil.io/secure
-    account_sid = 'ACfb7f22460b6f2b5bd537927c6b75ad90'
-    auth_token = '2f6b2ae403c13b1721c9e220104ff3a9'
+    account_sid = 'ACXXXXXXXXXXXXXXXXX'
+    auth_token = '2fXXXXXXXXXXXXXXXXXXXXXXX'
     client = Client(account_sid, auth_token)
 
     a=("caution \n "+animal+"\n is approaching\n" )*5
     call = client.calls.create(
                             twiml='<Response><Say voice="male" language="en"> %s </Say></Response>'%(a),
-                            to='+918072485316',
-                            from_='+13082108219'
+                            to='+91XXXXXXXXX',
+                            from_='+1XXXXXXX8219'
                         )
     c=1
 ################################################################# call to the forest department
@@ -26,15 +26,15 @@ from twilio.rest import Client
 def makecall0(animal):
     # Find your Account SID and Auth Token at twilio.com/console
     # and set the environment variables. See http://twil.io/secure
-    account_sid = 'AC77683cdc1c44cf5dbe2515473548027a'
-    auth_token = 'dc23d9f86a85b5c8a8d49fa26e5fa4ec'
+    account_sid = 'ACXXXXXXXXXXXXX7a'
+    auth_token = 'dc2XXXXXXXXXXXXXXXXXc'
     client = Client(account_sid, auth_token)
 
     a=("caution \n "+animal+"\n is approaching\n" )*5
     call = client.calls.create(
                             twiml='<Response><Say voice="male" language="en"> %s </Say></Response>'%(a),
-                            to='+918610755242',
-                            from_='+12722043027'
+                            to='+91XXXXXXXXX',
+                            from_='+1XXXXXXXXX'
                         )
     c=1
       
@@ -113,19 +113,6 @@ def ImagePath(path):
     global animal
     print(labels[mode(class_numbers)])
     animal=labels[mode(class_numbers)]
-            
-##   # %matplotlib inline
-##    plt.rcParams['figure.figsize'] = (5.0,5.0)
-##    plt.imshow(cv2.cvtColor(image_input, cv2.COLOR_BGR2RGB))
-##    plt.rcParams['figure.figsize'] = (5.0,5.0)
-##    plt.imshow(cv2.cvtColor(image_input, cv2.COLOR_BGR2RGB))
-##    #plt.show()
-##    
-##    labels2=[]
-##    for item in sorted(set(class_numbers)):
-##        labels2+=[labels[item]]
-##        
-##    return labels2
 import cv2
 video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 sleep(5)
